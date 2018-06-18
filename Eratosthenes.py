@@ -17,7 +17,6 @@ def eratosthenes():
         for i in range(nums[0], nums[-1], nums[0]):
             if i in nums:
                 nums.remove(i)
-                print(i)
 
     print(prime_numbers + nums)
 
