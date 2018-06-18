@@ -21,3 +21,12 @@ def eratosthenes():
     print(prime_numbers + nums)
 
 eratosthenes()
+
+def prime(n):
+    seq = list(range(2, n))
+    while len(seq) > 0:#リストのlen
+        prime = seq.pop(0)
+        yield prime
+        # 素数で割り切れない数字のリストを作成
+        seq = [i for i in seq if not i % prime == 0]
+print(list(prime(20)))
